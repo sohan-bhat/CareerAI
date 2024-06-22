@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import CareerAI from './CareerAI';
+import Routes from './Routes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <CareerAI />
+  <Routes />
 );
