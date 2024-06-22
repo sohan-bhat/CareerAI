@@ -6,7 +6,7 @@ class CareerAI extends Component {
     render() {
         return(
             <>
-                We are still not done with the final build, so after you submit, please press Ctrl + Shift + J to see your response. 
+                <div className="intro-title">Transforming Passion into Profession...</div>
                 <UserInputField />
             </>
         )
