@@ -5,7 +5,7 @@ const groq = new Groq({ apiKey: `${groqApiKey}`, dangerouslyAllowBrowser: true }
 export async function main(userInput) {
   const chatCompletion = await getGroqChatCompletion(userInput);
   // Print the completion returned by the LLM.
-  console.log(chatCompletion.choices[0]?.message?.content || "");
+  console.log(chatCompletion.choices[0]?.message?.content || "")
 }
 
 export async function getGroqChatCompletion(userInput) {

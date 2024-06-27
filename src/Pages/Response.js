@@ -1,10 +1,9 @@
 import React from 'react';
 import { main } from '../Tools/aiTools';
-const Response = () => {
+function Response({text}) {
     return (
         <div id="response-cover">
-            <p>Lorem ipsum dolar sit amet Lorem ipsum dolar sit amet Lorem
-                ipsum dolar sit amet Lorem ipsum dolar sit amet Lorem ipsum dolar sit amet </p>
+            <p>{text}</p>
         </div>
     );
 };

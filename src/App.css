@@ -201,9 +201,11 @@ button span:after {
 
 /* Output/Response Box */
 #response-cover {
+  position: absolute;
   display: flex;
   align-items: center;
   padding: 1% 2%;
+  margin-top: 15%;
   background-color: #B5CFFF;
   border-radius: 20px;
   box-shadow: 0 10px 40px #B5CFFF, 0 0 0 20px #ffffffeb;
@@ -211,6 +213,8 @@ button span:after {
   transform: scale(0.6);
   height: auto;
   font-size: 150%;
+  width: 80%;
+  left: 8%;
 }
 
 #response-cover p {
