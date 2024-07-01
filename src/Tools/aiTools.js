@@ -11,7 +11,7 @@ export async function getGroqChatCompletion(userInput) {
       },
       {
         role: "system",
-        content: "As the user gives their interests, tell them what possible future careers they can undergo. Pair this alongside the education required for their career. Make sure to keep a professional tone, but keep it concise ",
+        content: "As the user gives their interests, tell them in under 2 jobs, what possible future careers they can undergo. Be as conscise as possible. Pair this alongside the education ",
       },
     ],
     model: "llama3-8b-8192",
