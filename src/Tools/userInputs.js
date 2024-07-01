@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getGroqChatCompletion } from '../../Tools/aiTools';
+import { getGroqChatCompletion } from '../Tools/aiTools';
 
 export class UserInputField extends Component {
 
