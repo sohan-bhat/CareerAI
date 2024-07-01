@@ -7,7 +7,8 @@ class RequestAndResponse extends Component {
         super(props)
         this.state = {
             userInput: undefined,
-            response: ''
+            response: '',
+            isClicked: false
         }
     }
     
@@ -19,7 +20,11 @@ class RequestAndResponse extends Component {
     }
 
     click = (e) => {
+        this.setState({
+            isClicked: true
+        })
         this.response()
+
         e.preventDefault()
     }
 
@@ -33,23 +38,30 @@ class RequestAndResponse extends Component {
     render() {
         return(
             <>
-            <div id="user-input-cover">
-                <form method="get">
-                    <div className="tb">
-                    <div className="td">
-                        <input className='user-input' type="text" onChange={this.change} value={this.state.val} placeholder="I like music, art, and literature..." required/>
+            <div className="data-container">
+                <div className="intro-title">Transforming Passion into Profession...</div>
+                <div className="user-input-cover">
+                    <form method="get">
+                        <div className="tb">
+                        <div className="td">
+                            <input className='user-input' type="text" onChange={this.change} value={this.state.val} placeholder="I like music, art, and literature..." required/>
+                        </div>
+                        <div className="td" id="s-cover">
+                            <button type="submit" onClick={this.click}>
+                            <div className="s-circle"></div>
+                            <span></span>
+                            </button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+                { this.state.isClicked ?
+                    <div className="response-cover">
+                        <p>{this.state.response}</p>
                     </div>
-                    <div className="td" id="s-cover">
-                        <button type="submit" onClick={this.click}>
-                        <div id="s-circle"></div>
-                        <span></span>
-                        </button>
-                    </div>
-                    </div>
-                </form>
-            </div>
-            <div id="response-cover">
-                <p>{this.state.response}</p>
+                    :
+                    null
+                }
             </div>
             </>
         );
