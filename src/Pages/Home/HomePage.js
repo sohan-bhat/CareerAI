@@ -1,13 +1,13 @@
 import React from 'react';
-import { UserInputField } from '../Tools/userInputs';
-import '../App.css'
+import RequestAndResponse from './reqAndRes';
+import '../../App.css'
 
-const Home = () => {
+const HomePage = () => {
     return(
         <>
             <div className="intro-title">Transforming Passion into Profession...</div>
-            <UserInputField />
+            <RequestAndResponse />
         </>
     )
 }
-export default Home;
+export default HomePage;
