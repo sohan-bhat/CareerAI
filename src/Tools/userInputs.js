@@ -1,36 +1,35 @@
 import React, { Component } from 'react';
-import { main } from './aiTools';
+import { getGroqChatCompletion } from '../../Tools/aiTools';
 
-export class UserInputField extends Component {
+class UserInputField extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            val: undefined,
-            isClicked: false
+            userInput: undefined,
+            response: ''
         }
     }
     
 
     response() {
-        main(this.state.val)
-        return (
-            <p>Fetching Data...</p>
-        )
-    }
-    click = (e) => {
-        // main(this.state.val)
-        this.setState({
-            isClicked: true
+        getGroqChatCompletion(this.state.userInput).then((res) => {
+            this.setState({response: res.choices[0].message.content})
         })
+    }
+
+    click = (e) => {
+        this.response()
         e.preventDefault()
     }
+
     change = (event) => {
         const newValue = event.target.value
         this.setState({
-            val: newValue
+            userInput: newValue
         })
     }
+
     render() {
         return(
             <>
@@ -50,14 +49,11 @@ export class UserInputField extends Component {
                 </form>
             </div>
             <div id="response-cover">
-                {
-                    this.state.isClicked ? 
-                    this.response()
-                    :
-                    <p></p>
-                }
+                <p>{this.state.response}</p>
             </div>
             </>
         );
     }
 }
+
+export UserInputField;
