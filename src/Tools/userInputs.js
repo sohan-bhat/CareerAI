@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { getGroqChatCompletion } from '../../Tools/aiTools';
 
-class UserInputField extends Component {
+export class UserInputField extends Component {
 
     constructor(props) {
         super(props)
@@ -55,5 +55,3 @@ class UserInputField extends Component {
         );
     }
 }
-
-export UserInputField;
