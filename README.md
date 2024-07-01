@@ -1,16 +1,37 @@
 # CareerAI
-Creating new careers from just the interests of people!
 
-## About
-CareerAI is a simple website (so far) that helps people better decide what careers/jobs they can undergo based on what they like to do!
-As someone who struggled to find the corre
+CareerAI is a simple yet powerful tool that lets people around the world know what they can pursue based on what they like to do.
+But it doesn't end there. CareerAI also gets you informed about what courses you can take to get a lead in what you want to do later on.
+**Descriptive, Concise, and Informative** all in one website.
 
-## How it's made
-I am currently using LLM's to understand the user's interest(s), and fetch a response.
-I am able to do this by using `getGroqChatCompletion()` which is provided by GROQ API. The model I am using for my LLM is Llama3 which was created by Meta (Facebook).
+## Accessing Website
+### Do not click Github Pages Link, it is outdated!
+Instead, you can simply visit this Netlify link/project: https://careerai.netlify.app
 
-## How to access project
-You can visit the website: https://careerai.netlify.app to access the website for yourself, free of use!
+## Built With
 
-## Colaboration
-I am completely open if anyone wants to add a suggestion or recommendaton to the project! Just simply pull request this repository and I'll try to get to it as quickly as I can.
+* [ReactJS](https://react.dev/) - The web framework used
+* [Groq API](https://console.groq.com/docs) - API used
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## Authors
+
+* **Sohan Bhat** - *Entire Project* https://github.com/sohan-bhat
+
+See also the list of [contributors](https://github.com/sohan-bhat/CareerAI/graphs/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* This is using [Groq API](https://console.groq.com/docs); Not our own MLM (LLM)
+* I wanted to create this project because I felt like I was having a difficult time choosing what I really wanted to become when I grow up, turns out, this project showed me that I _really_ wanted to become a Computer Scientist!
