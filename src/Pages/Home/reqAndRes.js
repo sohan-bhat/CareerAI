@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getGroqChatCompletion } from '../../Tools/aiTools';
+import ReactMarkdown from 'react-markdown'
 
 class RequestAndResponse extends Component {
 
@@ -38,7 +39,7 @@ class RequestAndResponse extends Component {
     render() {
         return(
             <>
-            <div className="data-container">
+            <div className="flex-container">
                 <div className="intro-title">Transforming Passion into Profession...</div>
                 <div className="user-input-cover">
                     <form method="get">
@@ -57,7 +58,9 @@ class RequestAndResponse extends Component {
                 </div>
                 { this.state.isClicked ?
                     <div className="response-cover">
-                        <p>{this.state.response}</p>
+                        <p>
+                            <ReactMarkdown>{this.state.response}</ReactMarkdown>
+                        </p>
                     </div>
                     :
                     null

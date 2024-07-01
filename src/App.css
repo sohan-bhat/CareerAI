@@ -4,7 +4,7 @@
 
 * {
   outline: none;
-  font-family: 'Playwrite NG Modern', Courier, monospace;
+  font-family: 'Ubuntu', Courier, monospace;
 }
 
 /* User Input Bar */
@@ -19,7 +19,7 @@ body {
   background-color: rgba(245, 212, 183, 0.955)
 }
 
-.data-container {
+.flex-container {
   display: flex;
   flex-direction: column;
 }
@@ -45,13 +45,13 @@ button {
 }
 
 .user-input-cover {
-  margin-top: 5%;
   padding: 2%;
+  margin-top: 5%;
   background-color: #ff7575;
   border-radius: 20px;
   box-shadow: 0 10px 40px #B5CFFF, 0 0 0 20px #ffffffeb;
+  animation: fade-up-userInput 1.5s;
   transform: scale(0.6);
-  animation: fade-up 1.5s;
 }
 
 form {
@@ -164,7 +164,19 @@ button span:after {
 }
 
 /* Keyframes Animation Fade */
-@keyframes fade-up {
+@keyframes fade-up-response {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fade-up-userInput {
   0% {
     opacity: 0;
     transform: translateY(50px) scale(0.7);
@@ -194,7 +206,6 @@ button span:after {
   font-family: 'Playwrite NG Modern', sans-serif;
   font-weight: 900;
   text-align: center;
-  /* padding-top: 4%; */
   font-size: 300%;
   color: #ff7575;
   animation: fade-down 1.5s;
@@ -202,41 +213,23 @@ button span:after {
 
 /* Output/Response Box */
 .response-cover {
-  display: flex;
-  align-items: center;
   padding: 1% 2%;
   background-color: #B5CFFF;
   border-radius: 20px;
   box-shadow: 0 10px 40px #B5CFFF, 0 0 0 20px #ffffffeb;
-  animation: fade-up 1.5s;
-  transform: scale(0.6);
-  font-size: 150%;
-  margin-top: -1.5%;
+  margin: 1% 20%;
+  animation: fade-up-response 1.5s;
 }
 
 .response-cover p {
   font-family: "Ubuntu";
-  font-size: 125%;
-  text-align: center;
+  font-size: 110%;
 }
 
 /* Media compatibility */
-
-@media screen and (max-width: 1075px) {
+@media screen and (max-width: 637px) {
   .response-cover {
-    margin-top: -5%;
-  }
-}
-
-@media screen and (max-width: 908px) {
-  input[type="text"] {
-    font-size: 250%;
-  }
-}
-
-@media screen and (max-width: 817px) {
-  .response-cover p {
-    font-size: 100%;
+    margin-top: 5%;
   }
 }
 
@@ -245,52 +238,11 @@ button span:after {
     font-size: 250%;
   }
   .response-cover {
-    margin-top: -15%;
+    margin: 5% 10% 0;
   }
-}
-
-@media screen and (max-width: 440px) {
-  .intro-title {
-    font-size: 200%;
-  }
-  input[type="text"] {
-    font-size: 200%;
-  }
-  .response-cover {
-    margin-top: -20%;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .intro-title {
-    font-size: 150%;
-  }
-
-  .response-cover {
-    margin-top: -25%;
-  }
-
-  input[type="text"] {
-    font-size: 150%;
-  }
-
-  .response-cover p {
-    font-size: 100%;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .response-cover p {
-    font-size: 85%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .intro-title {
-    font-size: 105%;
-  }
-
-  .response-cover {
-    margin-top: -35%;
+  
+  .user-input-cover {
+    margin-right: -18%;
+    margin-left: -18%;
   }
 }
