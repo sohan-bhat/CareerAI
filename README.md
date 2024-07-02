@@ -35,3 +35,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * This is using [Groq API](https://console.groq.com/docs); Not our own MLM (LLM)
 * I wanted to create this project because I felt like I was having a difficult time choosing what I really wanted to become when I grow up, turns out, this project showed me that I _really_ wanted to become a Computer Scientist!
+* README.md; LICENSE.md; CONTRIBUTING.md; CODE OF CONDUCT.md all are templates that I have gotten from [Purple Booth](https://github.com/PurpleBooth), therefore all of the files I previously mentioned have credit that belong to her.
