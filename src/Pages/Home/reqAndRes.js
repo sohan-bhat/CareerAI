@@ -45,7 +45,7 @@ class RequestAndResponse extends Component {
                     <form method="get">
                         <div className="tb">
                         <div className="td">
-                            <input className='user-input' type="text" onChange={this.change} value={this.state.val} placeholder="Tell me your interests or what you like to do!" required/>
+                            <input className='user-input' type="text" onChange={this.change} value={this.state.val} placeholder="Tell me your interests!" required/>
                         </div>
                         <div className="td" id="s-cover">
                             <button type="submit" onClick={this.click}>
