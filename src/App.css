@@ -246,3 +246,13 @@ button span:after {
     margin-left: -18%;
   }
 }
+
+@media screen and (max-width: 426px) {
+  .intro-title {
+    font-size: 175%;
+  }
+
+  input[type="text"]::placeholder {
+    font-size: 60%;
+  }
+}
