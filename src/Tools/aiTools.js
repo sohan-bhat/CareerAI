@@ -14,6 +14,6 @@ export async function getGroqChatCompletion(userInput) {
         content: "As the user gives their interests, tell them in under 2 jobs, what possible future careers they can undergo. Be as conscise as possible. Pair this alongside the education ",
       },
     ],
-    model: "llama3-8b-8192",
+    model: "openai/gpt-oss-120b",
   });
 }
